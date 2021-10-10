@@ -1,0 +1,62 @@
+h1 {
+  text-transform: uppercase;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+h2 {
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 1.5px;
+}
+h3 {
+  text-transform: uppercase;
+  line-height: 36px;
+  letter-spacing: 1.15px;
+}
+h4 {
+  text-transform: uppercase;
+  line-height: 38px;
+  letter-spacing: 2px;
+}
+h5 {
+  text-transform: uppercase;
+  line-height: 33px;
+  letter-spacing: 1.7px;
+}
+h6.outline {
+  text-transform: uppercase;
+  line-height: 19px;
+  letter-spacing: 10px;
+}
+h6.subtitle {
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+p {
+  line-height: 25px;
+}
+div.btn-gold,
+div.btn-white {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+  }
+  h2 {
+  }
+  h3 {
+  }
+  h4 {
+  }
+  h5 {
+  }
+  h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+  }
+}
