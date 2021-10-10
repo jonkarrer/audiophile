@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import ArrowBtn from "@/components/lib/ArrowBtn";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,9 @@ const Home: NextPage = () => {
       <main>
         <h1>Audiofile app</h1>
       </main>
+      <button className="btn-gold">See Products</button>
+      <button className="btn-white">See Products</button>
+      <ArrowBtn action="Shop" link="/" />
     </div>
   );
 };
