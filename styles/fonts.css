@@ -23,12 +23,13 @@ h5 {
   line-height: 33px;
   letter-spacing: 1.7px;
 }
-h6.outline {
+.outline {
   text-transform: uppercase;
   line-height: 19px;
   letter-spacing: 10px;
 }
-h6.subtitle {
+.subtitle {
+  text-transform: uppercase;
   line-height: 25px;
   letter-spacing: 1px;
 }

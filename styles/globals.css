@@ -59,10 +59,10 @@ a {
   h6 {
     @apply md:font-bold md:text-lg;
   }
-  h6.outline {
+  .outline {
     @apply font-normal text-sm;
   }
-  h6.subtitle {
+  .subtitle {
     @apply font-bold text-xs;
   }
   p {
@@ -82,5 +82,8 @@ a {
   }
   .btn-white:hover {
     @apply text-white bg-black cursor-pointer;
+  }
+  .wrapper {
+    @apply mx-6 md:mx-8 lg:m-auto lg:w-11/12 lg:max-w-6xl;
   }
 }
