@@ -42,22 +42,3 @@ div.btn-white {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-@media (min-width: 768px) {
-  h1 {
-  }
-  h2 {
-  }
-  h3 {
-  }
-  h4 {
-  }
-  h5 {
-  }
-  h6 {
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 24px;
-    letter-spacing: 1.3px;
-  }
-}
