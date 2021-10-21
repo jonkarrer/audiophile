@@ -23,8 +23,12 @@ module.exports = {
         F1F1F1: "#F1F1F1",
         FAFAFA: "#FAFAFA",
         FFFFFF: "#FFFFFF",
-        979797: "rgba(300,300,300,.2)"
+        979797: "rgba(300,300,300,.2)",
+        "clear": "rgba(0,0,0, .3)"
       },
+      height: {
+        81 : "340px"
+      }
     },
   },
   variants: {
