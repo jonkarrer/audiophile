@@ -76,6 +76,9 @@ a {
   p {
     @apply font-medium text-base;
   }
+  p.light {
+    @apply text-white font-extralight opacity-50;
+  }
 }
 
 @layer components {

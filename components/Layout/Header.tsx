@@ -15,10 +15,9 @@ const Mobile = () => {
   const [menu, setMenu] = useState(true);
   return (
     <div className="lg:hidden">
+      {/** Hidden Overlay when nav is open */}
       <div
-        className={`h-screen w-screen bg-clear absolute top-0 ${
-          menu ? "hidden" : ""
-        }`}
+        className={`h-screen  bg-clear absolute top-0 ${menu ? "hidden" : ""}`}
       ></div>
 
       <header
@@ -30,6 +29,7 @@ const Mobile = () => {
             onClick={() => setMenu(!menu)}
             src="/shared/tablet/icon-hamburger.svg"
             alt="hamburger icon"
+            data-cy="hamburger"
           />
           <div className="flex items-center md:flex-1 md:px-11">
             <img
@@ -42,8 +42,11 @@ const Mobile = () => {
         </div>
       </header>
 
+      {/** Navigation slide component */}
       <nav
-        className={`w-screen absolute bg-clear ${
+        data-cy="nav-component"
+        data-test-state={menu}
+        className={`absolute left-0 w-screen bg-clear ${
           menu ? "transform -translate-x-full" : ""
         } `}
       >
@@ -55,34 +58,40 @@ const Mobile = () => {
   );
 };
 
-const Desktop = () => {
-  return (
-    <header
-      className="hidden lg:flex bg-101010 fixed top-0 w-screen"
-      style={{ height: "98px" }}
-    >
-      <div className="wrapper flex justify-between items-center h-full border-b border-979797 ">
-        <img className="w-36 h-6" src="/shared/desktop/logo.svg" alt="logo" />
-        <nav className="text-white grid grid-flow-col gap-9">
-          <Link passHref href="/">
-            <span className="subtitle">Home</span>
-          </Link>
-          <Link passHref href="/">
-            <span className="subtitle">Headphones</span>
-          </Link>
-          <Link passHref href="/">
-            <span className="subtitle">Speakers</span>
-          </Link>
-          <Link passHref href="/">
-            <span className="subtitle">Earphones</span>
-          </Link>
-        </nav>
+const Desktop = () => (
+  <header
+    className="hidden lg:flex bg-101010 fixed top-0 w-screen"
+    style={{ height: "98px" }}
+  >
+    <div className="wrapper flex justify-between items-center h-full border-b border-979797 ">
+      <Link passHref href="/">
         <img
-          className="h-5 w-6"
+          className="w-36 h-6 cursor-pointer"
+          src="/shared/desktop/logo.svg"
+          alt="logo"
+        />
+      </Link>
+      <nav className="text-white grid grid-flow-col gap-9">
+        <Link passHref href="/">
+          <span className="subtitle cursor-pointer">Home</span>
+        </Link>
+        <Link passHref href="/">
+          <span className="subtitle cursor-pointer">Headphones</span>
+        </Link>
+        <Link passHref href="/">
+          <span className="subtitle cursor-pointer">Speakers</span>
+        </Link>
+        <Link passHref href="/">
+          <span className="subtitle cursor-pointer">Earphones</span>
+        </Link>
+      </nav>
+      <Link passHref href="/">
+        <img
+          className="h-5 w-6 cursor-pointer"
           src="/shared/desktop/icon-cart.svg"
           alt="cart icon"
         />
-      </div>
-    </header>
-  );
-};
+      </Link>
+    </div>
+  </header>
+);
