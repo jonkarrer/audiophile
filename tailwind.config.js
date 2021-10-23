@@ -34,7 +34,8 @@ module.exports = {
         558: "558px",
       },
       backgroundImage: {
-        "header" : "url('public/home/mobile/image-header.jpg')"
+        "header" : "url('public/home/mobile/image-header.jpg')",
+        "/home/mobile/image-speaker-zx7.jpg" : "url('/home/mobile/image-speaker-zx7.jpg')"
       }
     },
   },

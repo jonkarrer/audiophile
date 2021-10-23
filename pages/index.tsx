@@ -1,12 +1,13 @@
 import type { NextPage } from "next";
-import { Splash, Menu, Gallery } from "@/components/Home";
+import { Splash, Menu, Gallery, Hero } from "@/components/Home";
 
 const Home: NextPage = () => {
   return (
-    <main className="mt-0">
+    <main>
       <Splash />
       <Menu />
       <Gallery />
+      <Hero />
     </main>
   );
 };
