@@ -24,10 +24,17 @@ module.exports = {
         FAFAFA: "#FAFAFA",
         FFFFFF: "#FFFFFF",
         979797: "rgba(300,300,300,.2)",
-        "clear": "rgba(0,0,0, .3)"
+        "4C4C4C" : "#4C4C4C"
       },
       height: {
-        81 : "340px"
+        81 : "340px",
+        600: "600px",
+      },
+      width: {
+        558: "558px",
+      },
+      backgroundImage: {
+        "header" : "url('public/home/mobile/image-header.jpg')"
       }
     },
   },

@@ -13,6 +13,14 @@ a {
 
 * {
   box-sizing: border-box;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 @tailwind base;
@@ -28,13 +36,17 @@ body {
 }
 
 main {
-  margin-top: 89px;
+  margin-top: 90px; /* The size of the fixed header */
+}
+section {
+  margin: 40px 0;
 }
 @media (min-width: 1024px) {
   main {
-    margin-top: 97px;
+    margin-top: 98px; /* The size of the fixed header */
   }
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -50,49 +62,58 @@ a {
 
 @layer base {
   h1 {
-    @apply font-bold text-4xl md:text-6xl;
+    @apply font-semibold leading-10 text-4xl md:text-6xl uppercase;
   }
   h2 {
-    @apply font-bold text-2xl md:text-5xl;
+    @apply font-semibold text-2xl md:text-5xl;
   }
   h3 {
-    @apply font-bold text-xl md:text-3xl;
+    @apply font-semibold text-xl md:text-3xl;
   }
   h4 {
-    @apply font-bold text-lg md:text-2xl;
+    @apply font-semibold text-lg md:text-2xl;
   }
   h5 {
-    @apply font-bold text-sm md:text-xl;
+    @apply font-semibold text-sm md:text-xl;
   }
   h6 {
-    @apply md:font-bold md:text-lg;
+    @apply md:font-semibold md:text-lg;
   }
   .outline {
     @apply font-normal text-sm;
   }
   .subtitle {
-    @apply font-bold text-xs;
+    @apply font-semibold text-xs;
   }
   p {
     @apply font-medium text-base;
   }
-  p.light {
+  .light {
     @apply text-white font-extralight opacity-50;
   }
 }
 
 @layer components {
-  .btn-gold {
-    @apply text-white bg-D87D4A w-40 h-12 border-0 grid place-content-center;
+  .btn {
+    @apply w-40 h-12 border-0 grid place-content-center text-xs font-semibold uppercase tracking-widest cursor-pointer;
   }
-  .btn-gold:hover {
-    @apply bg-FBAF85 cursor-pointer;
+  .btn.gold {
+    @apply text-white bg-D87D4A;
   }
-  .btn-white {
-    @apply text-black bg-white w-40 h-12 border border-black grid place-content-center;
+  .btn.gold:hover {
+    @apply bg-FBAF85;
   }
-  .btn-white:hover {
-    @apply text-white bg-black cursor-pointer;
+  .btn.white {
+    @apply text-black bg-white border border-black;
+  }
+  .btn.white:hover {
+    @apply text-white bg-black;
+  }
+  .btn.black {
+    @apply text-white bg-black;
+  }
+  .btn.black:hover {
+    @apply bg-4C4C4C;
   }
   .wrapper {
     @apply mx-6 md:mx-8 lg:m-auto lg:w-11/12 lg:max-w-6xl;

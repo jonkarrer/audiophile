@@ -17,7 +17,9 @@ const Mobile = () => {
     <div className="lg:hidden">
       {/** Hidden Overlay when nav is open */}
       <div
-        className={`h-screen  bg-clear absolute top-0 ${menu ? "hidden" : ""}`}
+        className={`h-screen md:w-screen bg-black opacity-60 absolute top-0 ${
+          menu ? "hidden" : ""
+        }`}
       ></div>
 
       <header
@@ -46,14 +48,24 @@ const Mobile = () => {
       <nav
         data-cy="nav-component"
         data-test-state={menu}
-        className={`absolute left-0 w-screen bg-clear ${
+        className={`fixed h-screen overflow-y-scroll md:w-screen z-30 left-0 md:pb-0 md:overflow-y-auto bg-clear ${
           menu ? "transform -translate-x-full" : ""
         } `}
       >
-        <div className="bg-white py-9 px-6 rounded-b-lg md:p-0 md:h-81 md:flex md:justify-center md:items-center">
+        <div className="bg-white pt-9 pb-36 w-screen px-6 rounded-b-lg md:p-0 md:h-81 md:flex md:justify-center md:items-center">
           <Catagories />
         </div>
       </nav>
+      <style jsx>{`
+        nav {
+          margin-top: 50px;
+        }
+        @media (min-width: 768px) {
+          nav {
+            margin-top: 58px;
+          }
+        }
+      `}</style>
     </div>
   );
 };

@@ -31,7 +31,7 @@ const Item = ({
   title: string;
   last: boolean;
 }) => (
-  <div className="grid place-items-center pb-4 relative md:w-56">
+  <div className="grid place-items-center pb-8 relative md:w-56">
     <div className="w-full h-3/4 absolute rounded-lg bottom-0 bg-F1F1F1"></div>
     <img
       className={`w-40 z-10 place-self-end justify-self-center 
