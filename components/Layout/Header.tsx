@@ -82,7 +82,7 @@ const Mobile = () => {
 
 const Desktop = () => (
   <header
-    className="hidden lg:flex bg-101010 fixed top-0 w-screen"
+    className="hidden lg:flex bg-101010 fixed top-0 w-screen z-50"
     style={{ height: "98px" }}
   >
     <div className="wrapper flex justify-between items-center h-full border-b border-979797 ">

@@ -28,9 +28,13 @@ module.exports = {
       },
       height: {
         81 : "340px",
+        82: "350px",
+        588: "588px",
         600: "600px",
       },
       width: {
+        81: "340px",
+        82: "350px",
         558: "558px",
         100: "400px",
       },
@@ -41,12 +45,18 @@ module.exports = {
       backgroundImage: {
         "header-mobile" : "url('public/home/mobile/image-header.jpg')",
         "header-tablet" : "url('public/home/tablet/image-header.jpg')",
+        "header-desktop" : "url('public/home/desktop/image-hero.jpg')",
+        "/home/mobile/image-speaker-zx9" : "url('/home/mobile/image-speaker-zx9.png')",
+        "/home/desktop/image-speaker-zx9" : "url('/home/desktop/image-speaker-zx9.png')",
         "/home/mobile/image-speaker-zx7" : "url('/home/mobile/image-speaker-zx7.jpg')",
         "/home/tablet/image-speaker-zx7" : "url('/home/tablet/image-speaker-zx7.jpg')",
+        "/home/desktop/image-speaker-zx7" : "url('/home/desktop/image-speaker-zx7.jpg')",
         "/home/mobile/image-earphones-yx1": "url('/home/mobile/image-earphones-yx1.jpg')",
         "/home/tablet/image-earphones-yx1": "url('/home/tablet/image-earphones-yx1.jpg')",
+        "/home/desktop/image-earphones-yx1": "url('/home/desktop/image-earphones-yx1.jpg')",
         "/shared/mobile/image-best-gear" : "url('/shared/mobile/image-best-gear.jpg')",
-        "/shared/tablet/image-best-gear": "url('/shared/tablet/image-best-gear.jpg')"
+        "/shared/tablet/image-best-gear": "url('/shared/tablet/image-best-gear.jpg')",
+        "/shared/desktop/image-best-gear": "url('/shared/desktop/image-best-gear.jpg')",
       }
     },
   },
