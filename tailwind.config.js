@@ -32,10 +32,21 @@ module.exports = {
       },
       width: {
         558: "558px",
+        100: "400px",
       },
+      scale: {
+        "65": ".65",
+      },
+
       backgroundImage: {
-        "header" : "url('public/home/mobile/image-header.jpg')",
-        "/home/mobile/image-speaker-zx7.jpg" : "url('/home/mobile/image-speaker-zx7.jpg')"
+        "header-mobile" : "url('public/home/mobile/image-header.jpg')",
+        "header-tablet" : "url('public/home/tablet/image-header.jpg')",
+        "/home/mobile/image-speaker-zx7" : "url('/home/mobile/image-speaker-zx7.jpg')",
+        "/home/tablet/image-speaker-zx7" : "url('/home/tablet/image-speaker-zx7.jpg')",
+        "/home/mobile/image-earphones-yx1": "url('/home/mobile/image-earphones-yx1.jpg')",
+        "/home/tablet/image-earphones-yx1": "url('/home/tablet/image-earphones-yx1.jpg')",
+        "/shared/mobile/image-best-gear" : "url('/shared/mobile/image-best-gear.jpg')",
+        "/shared/tablet/image-best-gear": "url('/shared/tablet/image-best-gear.jpg')"
       }
     },
   },

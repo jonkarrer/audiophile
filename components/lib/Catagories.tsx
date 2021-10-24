@@ -2,7 +2,7 @@ import ArrowBtn from "./ArrowBtn";
 
 export default function Catagories() {
   return (
-    <div className="grid gap-4 md:flex md:gap-0 md:space-x-4">
+    <div className="grid gap-4 md:flex md:gap-0 md:justify-between md:w-full">
       <Item
         img="/shared/desktop/image-category-thumbnail-headphones.png"
         title="Headphones"

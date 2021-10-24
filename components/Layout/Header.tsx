@@ -13,11 +13,21 @@ export default function Header() {
 
 const Mobile = () => {
   const [menu, setMenu] = useState(true);
+
+  const handleClick = () => {
+    setMenu(!menu);
+
+    if (menu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
   return (
     <div className="lg:hidden">
       {/** Hidden Overlay when nav is open */}
       <div
-        className={`h-screen md:w-screen bg-black opacity-60 absolute top-0 ${
+        className={`h-screen md:w-screen bg-black opacity-60 absolute top-0 z-30 ${
           menu ? "hidden" : ""
         }`}
       ></div>
@@ -28,7 +38,7 @@ const Mobile = () => {
       >
         <div className="wrapper flex justify-between items-center h-full md:border-b border-979797">
           <img
-            onClick={() => setMenu(!menu)}
+            onClick={() => handleClick()}
             src="/shared/tablet/icon-hamburger.svg"
             alt="hamburger icon"
             data-cy="hamburger"
@@ -52,7 +62,7 @@ const Mobile = () => {
           menu ? "transform -translate-x-full" : ""
         } `}
       >
-        <div className="bg-white pt-9 pb-36 w-screen px-6 rounded-b-lg md:p-0 md:h-81 md:flex md:justify-center md:items-center">
+        <div className="bg-white pt-20 pb-36 px-6 w-screen rounded-b-lg md:pt-0 md:pb-0 md:h-81 md:flex md:justify-center md:items-center">
           <Catagories />
         </div>
       </nav>
