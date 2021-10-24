@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Hero from "../lib/Hero";
 
-const Footer = () => {
-  return (
+const Footer = () => (
+  <div>
+    <Hero />
     <footer className="bg-101010">
       <div className="wrapper grid gap-12 py-12 md:grid-cols-2 relative">
         <div
@@ -55,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  </div>
+);
 
 export default Footer;

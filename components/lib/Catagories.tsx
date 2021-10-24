@@ -35,7 +35,7 @@ const Item = ({
     <div className="w-full h-3/4 absolute rounded-lg bottom-0 bg-F1F1F1"></div>
     <img
       className={`w-40 z-10 place-self-end justify-self-center lg:w-52 lg:h-48 
-      ${last ? "w-44 md:w-56" : ""}  `}
+      ${last ? "w-44 lg:w-56" : ""}  `}
       src={img}
       alt="catagory image"
     />
