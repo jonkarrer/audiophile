@@ -27,8 +27,14 @@ a {
 
 section {
   padding: 60px 0;
+  max-width: 1440px;
+  margin: auto;
 }
-
+@media (min-width: 768px) {
+  section {
+    padding-top: 120px;
+  }
+}
 @media (min-width: 1024px) {
   section {
     padding: 120px 0;
@@ -44,7 +50,7 @@ section {
     @apply font-semibold leading-10 md:leading-none text-4xl md:text-6xl uppercase;
   }
   h2 {
-    @apply font-semibold text-2xl lg:text-5xl;
+    @apply font-semibold text-2xl lg:text-5xl leading-10;
   }
   h3 {
     @apply font-semibold text-xl md:text-3xl;

@@ -18,7 +18,7 @@ const Mobile = ({ alpha }: { alpha: number }) => {
     <div className="lg:hidden">
       {/** Hidden Overlay when nav is open */}
       <div
-        className={`h-screen md:w-screen bg-black opacity-60 absolute top-0 z-30 ${
+        className={`fixed h-screen md:w-screen bg-black opacity-60 top-0 z-30 ${
           menu ? "hidden" : ""
         }`}
       ></div>

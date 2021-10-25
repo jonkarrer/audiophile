@@ -5,8 +5,8 @@ const Hero = () => (
     <div className="wrapper">
       <article className="grid gap-11 text-center place-items-center lg:grid-cols-2 lg:text-left">
         <div className="bg-/shared/mobile/image-best-gear bg-cover h-80 w-full md:bg-/shared/tablet/image-best-gear lg:bg-/shared/desktop/image-best-gear lg:h-588 lg:col-start-2"></div>
-        <div className="grid gap-11 lg:gap-6 lg:col-start-1 lg:row-start-1">
-          <h2 className="w-80 md:text-5xl md:w-3/4 ">
+        <div className="grid gap-9 place-items-center lg:place-items-start lg:col-start-1 lg:row-start-1">
+          <h2 className="w-80 md:text-5xl md:w-100 ">
             bringing you the <span className="text-D87D4A">best</span> audio
             gear
           </h2>

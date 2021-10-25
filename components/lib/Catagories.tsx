@@ -5,17 +5,17 @@ export default function Catagories() {
     <div className="grid gap-4 md:flex md:gap-0 md:justify-between md:w-full">
       <Item
         img="/shared/desktop/image-category-thumbnail-headphones.png"
-        title="Headphones"
+        title="headphones"
         last={false}
       />
       <Item
         img="/shared/desktop/image-category-thumbnail-speakers.png"
-        title="Speakers"
+        title="speakers"
         last={false}
       />
       <Item
         img="/shared/desktop/image-category-thumbnail-earphones.png"
-        title="Earphones"
+        title="earphones"
         last={true}
       />
     </div>
@@ -48,7 +48,7 @@ const Item = ({
     </span>
 
     <div className="z-10">
-      <ArrowBtn action="shop" link="/" />
+      <ArrowBtn action="shop" link={`/${title}`} />
     </div>
   </div>
 );

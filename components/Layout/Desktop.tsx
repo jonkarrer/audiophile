@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Desktop = ({ alpha }: { alpha: number }) => (
   <header
-    className="hidden lg:flex fixed top-0 w-screen z-50"
+    className="hidden lg:flex fixed top-0 w-screen z-50 max-w-8xl left-0 right-0 m-auto"
     style={{ height: "98px", background: `rgba(16,16,16,${alpha})` }}
   >
     <div className="wrapper flex justify-between items-center h-full border-b border-979797 ">
@@ -17,17 +17,17 @@ const Desktop = ({ alpha }: { alpha: number }) => (
         <Link passHref href="/">
           <span className="subtitle cursor-pointer">Home</span>
         </Link>
-        <Link passHref href="/">
+        <Link passHref href="/headphones">
           <span className="subtitle cursor-pointer">Headphones</span>
         </Link>
-        <Link passHref href="/">
+        <Link passHref href="/speakers">
           <span className="subtitle cursor-pointer">Speakers</span>
         </Link>
-        <Link passHref href="/">
+        <Link passHref href="/earphones">
           <span className="subtitle cursor-pointer">Earphones</span>
         </Link>
       </nav>
-      <Link passHref href="/">
+      <Link passHref href="/cart">
         <img
           className="h-5 w-6 cursor-pointer"
           src="/shared/desktop/icon-cart.svg"

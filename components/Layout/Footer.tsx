@@ -4,7 +4,7 @@ import Hero from "../lib/Hero";
 const Footer = () => (
   <div>
     <Hero />
-    <footer className="bg-101010">
+    <footer className="bg-101010 mt-16 md:mt-28">
       <div className="wrapper grid gap-12 py-12 md:grid-cols-2 relative">
         <div
           className="bg-D87D4A h-1 m-auto absolute top-0 left-0 right-0 md:m-0"
