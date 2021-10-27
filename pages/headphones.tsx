@@ -29,7 +29,7 @@ const Headphones = () => {
             <div className="grid gap-10 place-items-center lg:place-items-start">
               <p className="outline light text-D87D4A">New Product</p>
               <h2 className="w-80">xx99 mark II Headphones</h2>
-              <p className="w-80 md:w-558 lg:w-150">
+              <p className="w-80 md:w-558 lg:w-150 opacity-50">
                 The new XX99 Mark II headphones is the pinnacle of pristine
                 audio. It redefines your premium headphone experience by
                 reproducing the balanced depth and precision of studio-quality

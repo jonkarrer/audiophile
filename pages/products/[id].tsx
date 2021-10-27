@@ -1,11 +1,49 @@
 import { GetStaticProps } from "next";
 import supabase from "@/utils/supabaseClient";
+import { IProduct } from "@/utils/interfaces";
+import {
+  CategoryImage,
+  Price,
+  InTheBox,
+  Features,
+  Splash,
+} from "@/components/Products";
 
-export default function Product({ data }: any) {
-  console.log("props", data[0]);
+export default function Product({ data }: { data: IProduct[] }) {
+  const product = data[0];
+  const isNew = product.new;
+
+  const {
+    name,
+    image,
+    categoryImage,
+    price,
+    description,
+    features,
+    includes,
+    gallery,
+    others,
+  } = product;
+
+  console.log(includes);
   return (
-    <div>
-      <h1>{data[0].name}</h1>
+    <div className="mt-28">
+      <div className="wrapper">
+        <p className="opacity-50">Go Back</p>
+
+        <Splash
+          categoryImage={categoryImage}
+          isNew={isNew}
+          name={name}
+          description={description}
+        />
+
+        <Price price={price} />
+
+        <Features features={features} />
+
+        <InTheBox includes={includes} />
+      </div>
     </div>
   );
 }

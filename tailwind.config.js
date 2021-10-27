@@ -55,7 +55,6 @@ module.exports = {
       scale: {
         "65": ".65",
       },
-
       backgroundImage: {
         "header-mobile" : "url('public/home/mobile/image-header.jpg')",
         "header-tablet" : "url('public/home/tablet/image-header.jpg')",
@@ -69,8 +68,26 @@ module.exports = {
         "/home/tablet/image-earphones-yx1": "url('/home/tablet/image-earphones-yx1.jpg')",
         "/home/desktop/image-earphones-yx1": "url('/home/desktop/image-earphones-yx1.jpg')",
         "/shared/mobile/image-best-gear" : "url('/shared/mobile/image-best-gear.jpg')",
-        "/shared/tablet/image-best-gear": "url('/shared/tablet/image-best-gear.jpg')",
-        "/shared/desktop/image-best-gear": "url('/shared/desktop/image-best-gear.jpg')",
+        "/shared/tablet/image-best-gear" : "url('/shared/tablet/image-best-gear.jpg')",
+        "/shared/desktop/image-best-gear" : "url('/shared/desktop/image-best-gear.jpg')",
+
+        "./public/product-yx1-earphones/desktop/image-product.jpg" : "url('/product-yx1-earphones/desktop/image-product.jpg')",
+        "./public/product-yx1-earphones/tablet/image-product.jpg" : "url('/product-yx1-earphones/tablet/image-product.jpg')",
+
+        "./public/product-xx59-headphones/desktop/image-product.jpg" : "url('/product-xx59-headphones/desktop/image-product.jpg')",
+        "./public/product-xx59-headphones/tablet/image-product.jpg" : "url('/product-xx59-headphones/tablet/image-product.jpg')",
+
+        "./public/product-xx99-mark-one-headphones/desktop/image-product.jpg" : "url('/product-xx99-mark-one-headphones/desktop/image-product.jpg')",
+        "./public/product-xx99-mark-one-headphones/tablet/image-product.jpg" : "url('/product-xx99-mark-one-headphones/tablet/image-product.jpg')",
+
+        "./public/product-xx99-mark-two-headphones/desktop/image-product.jpg" : "url('/product-xx99-mark-two-headphones/desktop/image-product.jpg')",
+        "./public/product-xx99-mark-two-headphones/tablet/image-product.jpg" : "url('/product-xx99-mark-two-headphones/tablet/image-product.jpg')",
+
+        "./public/product-zx7-speaker/desktop/image-product.jpg" : "url('/product-zx7-speaker/desktop/image-product.jpg')",
+        "./public/product-zx7-speaker/tablet/image-product.jpg" : "url('/product-zx7-speaker/tablet/image-product.jpg')",
+
+        "./public/product-zx9-speaker/desktop/image-product.jpg" : "url('/product-zx9-speaker/desktop/image-product.jpg')",
+        "./public/product-zx9-speaker/tablet/image-product.jpg" : "url('/product-zx9-speaker/tablet/image-product.jpg')",
       }
     },
   },
