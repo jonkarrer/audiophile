@@ -24,13 +24,32 @@ export interface IProduct {
   description: string;
   features: string;
   includes: Array<IIncludes>;
-  gallery: { order: { path: string } };
-  others: Array<{ item: string }>;
+  gallery: IGallery;
+  others: Array<IOther>;
+}
+
+export interface IOther {
+  slug: string;
+  name: string;
+  image: IImage;
+}
+
+export interface IGallery {
+  first: IGalleryItem;
+  second: IGalleryItem;
+  third: IGalleryItem;
+}
+
+export interface IGalleryItem {
+  mobile: string;
+  tablet: string;
+  desktop: string;
 }
 
 export interface ISplash {
-  categoryImage: IImage;
+  image: IImage;
   isNew: boolean;
   description: string;
   name: string;
+  price: number;
 }

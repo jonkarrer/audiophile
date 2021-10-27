@@ -9,7 +9,7 @@ const Price = ({ price }: { price: number }) => {
     finalPrice = priceArr.join("");
   }
 
-  return <h4>{`$ ${finalPrice}`}</h4>;
+  return <h4 className="text-lg">{`$ ${finalPrice}`}</h4>;
 };
 
 export default Price;

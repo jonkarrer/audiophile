@@ -2,12 +2,13 @@ import { GetStaticProps } from "next";
 import supabase from "@/utils/supabaseClient";
 import { IProduct } from "@/utils/interfaces";
 import {
-  CategoryImage,
-  Price,
   InTheBox,
   Features,
   Splash,
+  Gallery,
+  Others,
 } from "@/components/Products";
+import Catagories from "@/components/lib/Catagories";
 
 export default function Product({ data }: { data: IProduct[] }) {
   const product = data[0];
@@ -28,21 +29,25 @@ export default function Product({ data }: { data: IProduct[] }) {
   console.log(includes);
   return (
     <div className="mt-28">
-      <div className="wrapper">
-        <p className="opacity-50">Go Back</p>
-
+      <div className="wrapper grid gap-24">
         <Splash
-          categoryImage={categoryImage}
+          image={image}
           isNew={isNew}
           name={name}
           description={description}
+          price={price}
         />
 
-        <Price price={price} />
+        <div className="grid gap-24 lg:flex">
+          <Features features={features} />
+          <InTheBox includes={includes} />
+        </div>
 
-        <Features features={features} />
+        <Gallery gallery={gallery} />
 
-        <InTheBox includes={includes} />
+        <Others others={others} />
+
+        <Catagories />
       </div>
     </div>
   );
@@ -52,7 +57,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data, error } = await supabase
     .from("products")
     .select("*")
-    .match({ id: params?.id });
+    .match({ slug: params?.slug });
 
   if (!data) {
     console.log(error);
@@ -66,12 +71,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { id: "1" } },
-      { params: { id: "2" } },
-      { params: { id: "3" } },
-      { params: { id: "4" } },
-      { params: { id: "5" } },
-      { params: { id: "6" } },
+      { params: { slug: "yx1-earphones" } },
+      { params: { slug: "xx59-headphones" } },
+      { params: { slug: "xx99-mark-one-headphones" } },
+      { params: { slug: "xx9-mark-two-headphones" } },
+      { params: { slug: "zx7-speaker" } },
+      { params: { slug: "zx9-speaker" } },
     ],
     fallback: false,
   };

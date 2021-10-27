@@ -47,7 +47,7 @@ module.exports = {
         175: "475px",
         200: "500px",
         558: "558px",
-        
+        635: "635px"
       },
       maxWidth: {
         "8xl" : "1440px"

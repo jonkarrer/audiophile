@@ -2,7 +2,7 @@ import { IIncludes } from "@/utils/interfaces";
 
 const InTheBox = ({ includes }: { includes: Array<IIncludes> }) => {
   return (
-    <article className="grid gap-5">
+    <article className="grid gap-10 md:grid-cols-2 lg:grid-cols-1 lg:h-24">
       <h3>In the box</h3>
       <div className="grid gap-3">
         {includes.map((item, index) => (

@@ -9,7 +9,7 @@ export default function Header() {
 
   useEffect(() => {
     //Set header to solid background for product pages
-    if (router.pathname === "/products/[id]") {
+    if (router.pathname === "/products/[slug]") {
       return setAlpha(1);
     }
     window.onscroll = () => setAlpha(window.scrollY / window.innerHeight);
