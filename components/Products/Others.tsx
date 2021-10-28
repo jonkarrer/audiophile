@@ -5,7 +5,7 @@ function Others({ others }: { others: Array<IOther> }) {
   return (
     <div className="grid place-items-center gap-10">
       <h3>you may also like</h3>
-      <div className="md:flex md:space-x-5">
+      <div className=" grid gap-10 md:gap-0 md:flex md:space-x-5">
         {others.map((item, index) => (
           <article key={index} className="grid gap-6 place-items-center">
             <img

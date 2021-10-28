@@ -15,7 +15,9 @@ export default function Product({ data }: { data: IProduct[] }) {
   const isNew = product.new;
 
   const {
+    id,
     name,
+    slug,
     image,
     categoryImage,
     price,
@@ -30,11 +32,13 @@ export default function Product({ data }: { data: IProduct[] }) {
     <div className="mt-28 lg:mt-44">
       <div className="wrapper grid gap-24 lg:gap-44">
         <Splash
+          id={id}
           image={image}
           isNew={isNew}
           name={name}
           description={description}
           price={price}
+          slug={slug}
         />
 
         <div className="grid gap-24 lg:flex">

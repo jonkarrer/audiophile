@@ -52,4 +52,6 @@ export interface ISplash {
   description: string;
   name: string;
   price: number;
+  slug: string;
+  id: number;
 }

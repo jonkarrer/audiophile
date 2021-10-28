@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Catagories from "../lib/Catagories";
+import Cart from "../Cart";
 
 const Mobile = ({ alpha }: { alpha: number }) => {
   const [menu, setMenu] = useState(true);
@@ -16,6 +17,7 @@ const Mobile = ({ alpha }: { alpha: number }) => {
 
   return (
     <div className="lg:hidden">
+      <Cart />
       {/** Hidden Overlay when nav is open */}
       <div
         className={`fixed h-screen md:w-screen bg-black opacity-60 top-0 z-30 ${

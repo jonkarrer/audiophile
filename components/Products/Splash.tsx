@@ -4,7 +4,7 @@ import Price from "./Price";
 import { useRouter } from "next/router";
 import AddToCart from "../lib/AddToCart";
 
-function Splash({ image, isNew, name, description, price }: ISplash) {
+function Splash({ image, isNew, name, description, price, slug, id }: ISplash) {
   const router = useRouter();
   return (
     <article className="grid gap-10 md:grid-cols-2">
@@ -21,7 +21,12 @@ function Splash({ image, isNew, name, description, price }: ISplash) {
         </div>
         <p className="w-80 lg:w-150 opacity-50">{description}</p>
         <Price price={price} />
-        <AddToCart />
+        <AddToCart
+          productName={slug}
+          id={id}
+          price={price}
+          image={image.desktop}
+        />
       </div>
     </article>
   );
