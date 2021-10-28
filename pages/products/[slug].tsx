@@ -26,10 +26,9 @@ export default function Product({ data }: { data: IProduct[] }) {
     others,
   } = product;
 
-  console.log(includes);
   return (
-    <div className="mt-28">
-      <div className="wrapper grid gap-24">
+    <div className="mt-28 lg:mt-44">
+      <div className="wrapper grid gap-24 lg:gap-44">
         <Splash
           image={image}
           isNew={isNew}
@@ -74,7 +73,7 @@ export async function getStaticPaths() {
       { params: { slug: "yx1-earphones" } },
       { params: { slug: "xx59-headphones" } },
       { params: { slug: "xx99-mark-one-headphones" } },
-      { params: { slug: "xx9-mark-two-headphones" } },
+      { params: { slug: "xx99-mark-two-headphones" } },
       { params: { slug: "zx7-speaker" } },
       { params: { slug: "zx9-speaker" } },
     ],

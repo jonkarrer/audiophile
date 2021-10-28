@@ -1,5 +1,6 @@
 import Catagories from "@/components/lib/Catagories";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Earphones = () => {
   const [image, setImage] = useState("desktop");
@@ -17,7 +18,7 @@ const Earphones = () => {
   return (
     <main>
       <section className="h-48 bg-101010 flex justify-center items-end p-0 md:h-81">
-        <h2 className="text-white mb-7 md:mb-24 md:text-5xl">speakers</h2>
+        <h2 className="text-white mb-7 md:mb-24 md:text-5xl">earphones</h2>
       </section>
       <section>
         <div className="wrapper grid gap-32">
@@ -35,7 +36,9 @@ const Earphones = () => {
                 connectivity -- creating new possibilities for more pleasing and
                 practical audio setups.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="products/yx1-earphones">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
         </div>

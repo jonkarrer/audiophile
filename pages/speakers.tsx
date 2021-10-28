@@ -1,5 +1,6 @@
 import Catagories from "@/components/lib/Catagories";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Speakers = () => {
   const [image, setImage] = useState("desktop");
@@ -35,7 +36,9 @@ const Speakers = () => {
                 connectivity -- creating new possibilities for more pleasing and
                 practical audio setups.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="/products/zx9-speaker">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
 
@@ -53,7 +56,9 @@ const Speakers = () => {
                 represents the top of the line powered speakers for home or
                 studio use.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="/products/zx7-speaker">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
         </div>

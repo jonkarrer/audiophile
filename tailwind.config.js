@@ -51,6 +51,7 @@ module.exports = {
       },
       maxWidth: {
         "8xl" : "1440px"
+
       },
       scale: {
         "65": ".65",

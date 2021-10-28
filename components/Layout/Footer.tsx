@@ -19,13 +19,13 @@ const Footer = () => (
           <Link passHref href="/">
             <span className="subtitle text-white">Home</span>
           </Link>
-          <Link passHref href="/">
+          <Link passHref href="/headphones">
             <span className="subtitle text-white">Headphones</span>
           </Link>
-          <Link passHref href="/">
+          <Link passHref href="/speakers">
             <span className="subtitle text-white">Speakers</span>
           </Link>
-          <Link passHref href="/">
+          <Link passHref href="/earphones">
             <span className="subtitle text-white">Earphones</span>
           </Link>
         </nav>

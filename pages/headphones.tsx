@@ -1,5 +1,6 @@
 import Catagories from "@/components/lib/Catagories";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Headphones = () => {
   const [image, setImage] = useState("desktop");
@@ -35,7 +36,9 @@ const Headphones = () => {
                 reproducing the balanced depth and precision of studio-quality
                 sound.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="/products/xx99-mark-two-headphones">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
 
@@ -53,7 +56,9 @@ const Headphones = () => {
                 mixing engineers, and music aficionados alike in studios and on
                 the go.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="/products/xx99-mark-one-headphones">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
 
@@ -70,7 +75,9 @@ const Headphones = () => {
                 durable versatile wireless headset is a brilliant companion at
                 home or on the move.
               </p>
-              <button className="btn gold">see product</button>
+              <Link passHref href="/products/xx59-headphones">
+                <button className="btn gold">see product</button>
+              </Link>
             </div>
           </article>
         </div>

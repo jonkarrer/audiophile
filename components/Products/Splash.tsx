@@ -1,11 +1,17 @@
 import { ISplash } from "@/utils/interfaces";
 import ProductImage from "./ProductImage";
 import Price from "./Price";
+import { useRouter } from "next/router";
+import AddToCart from "../lib/AddToCart";
+
 function Splash({ image, isNew, name, description, price }: ISplash) {
+  const router = useRouter();
   return (
     <article className="grid gap-10 md:grid-cols-2">
       <div className="grid gap-10">
-        <p className="opacity-50 md">Go Back</p>
+        <p onClick={() => router.back()} className="opacity-50 cursor-pointer">
+          Go Back
+        </p>
         <ProductImage image={image} />
       </div>
       <div className="grid gap-9 md:place-content-center">
@@ -15,6 +21,7 @@ function Splash({ image, isNew, name, description, price }: ISplash) {
         </div>
         <p className="w-80 lg:w-150 opacity-50">{description}</p>
         <Price price={price} />
+        <AddToCart />
       </div>
     </article>
   );

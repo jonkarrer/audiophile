@@ -1,4 +1,5 @@
 import { IOther } from "@/utils/interfaces";
+import Link from "next/link";
 
 function Others({ others }: { others: Array<IOther> }) {
   return (
@@ -13,7 +14,9 @@ function Others({ others }: { others: Array<IOther> }) {
               alt="product image"
             />
             <h3 className="md:text-xl">{item.name}</h3>
-            <button className="btn gold">see product</button>
+            <Link passHref href={`/products/${item.slug}`}>
+              <button className="btn gold">see product</button>
+            </Link>
           </article>
         ))}
       </div>

@@ -1,4 +1,8 @@
-const Splash = () => (
+import type { NextPage } from "next";
+
+import Link from "next/link";
+
+const Splash: NextPage = () => (
   <section className="splash max-h-base lg:max-h-2xl h-screen bg-header-mobile bg-cover bg-center md:bg-header-tablet lg:bg-header-desktop">
     <div className="wrapper flex justify-center items-center h-full lg:justify-start">
       <article className="grid gap-6 text-center lg:text-left lg:gap-9">
@@ -10,7 +14,9 @@ const Splash = () => (
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <button className="btn gold m-auto lg:m-0">See Product</button>
+        <Link passHref href="/products/xx99-mark-two-headphones">
+          <button className="btn gold m-auto lg:m-0">See Product</button>
+        </Link>
       </article>
     </div>
   </section>
