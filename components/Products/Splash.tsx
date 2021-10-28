@@ -2,7 +2,7 @@ import { ISplash } from "@/utils/interfaces";
 import ProductImage from "./ProductImage";
 import Price from "./Price";
 import { useRouter } from "next/router";
-import AddToCart from "../lib/AddToCart";
+import AddToCart from "../Cart/AddToCart";
 
 function Splash({ image, isNew, name, description, price, slug, id }: ISplash) {
   const router = useRouter();

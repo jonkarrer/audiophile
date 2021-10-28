@@ -55,3 +55,10 @@ export interface ISplash {
   slug: string;
   id: number;
 }
+
+export interface IAddToCart {
+  productName: string;
+  id: number;
+  price: number;
+  image: string;
+}

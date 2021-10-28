@@ -1,21 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useCartContext } from "../Cart/CartProvider";
-import { IProduct } from "@/utils/interfaces";
+import { useCartContext } from "./CartProvider";
+import { IAddToCart } from "@/utils/interfaces";
 
-const AddToCart = ({
-  productName,
-  id,
-  price,
-  image,
-}: {
-  productName: string;
-  id: number;
-  price: number;
-  image: string;
-}) => {
+const AddToCart = ({ productName, id, price, image }: IAddToCart) => {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
+
   const cart = useCartContext();
 
   useEffect(() => {
@@ -27,9 +18,7 @@ const AddToCart = ({
     const checkCart = cart?.currentCart.filter((item) => item.id === id);
 
     if (checkCart?.length != 0) {
-      const [item] = checkCart as any;
-      item.quantity = quantity;
-      console.log(item);
+      alert("Item is already in the Cart ");
     } else {
       cart?.updateCart([
         ...cart.currentCart,
