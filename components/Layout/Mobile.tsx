@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Catagories from "../lib/Catagories";
-import CartDropdown from "../Cart/CartDropdown";
+import CartDropdown from "../Cart/Dropdown";
 
 const Mobile = ({ alpha }: { alpha: number }) => {
   const [menu, setMenu] = useState(true);

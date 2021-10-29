@@ -2,7 +2,7 @@ import { ISplash } from "@/utils/interfaces";
 import ProductImage from "./ProductImage";
 import Price from "./Price";
 import { useRouter } from "next/router";
-import AddToCart from "../Cart/AddToCart";
+import AddItem from "../Cart/AddItem";
 
 function Splash({ image, isNew, name, description, price, slug, id }: ISplash) {
   const router = useRouter();
@@ -21,7 +21,7 @@ function Splash({ image, isNew, name, description, price, slug, id }: ISplash) {
         </div>
         <p className="w-80 lg:w-150 opacity-50">{description}</p>
         <Price price={price} />
-        <AddToCart
+        <AddItem
           productName={slug}
           id={id}
           price={price}

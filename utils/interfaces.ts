@@ -62,3 +62,11 @@ export interface IAddToCart {
   price: number;
   image: string;
 }
+
+export interface IItem {
+  image: string;
+  name: string;
+  price: number;
+  quantity: number;
+  id: number;
+}

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useCartContext } from "./CartProvider";
 import { IAddToCart } from "@/utils/interfaces";
 
-const AddToCart = ({ productName, id, price, image }: IAddToCart) => {
+const AddItem = ({ productName, id, price, image }: IAddToCart) => {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
 
@@ -18,7 +18,7 @@ const AddToCart = ({ productName, id, price, image }: IAddToCart) => {
     const checkCart = cart?.currentCart.filter((item) => item.id === id);
 
     if (checkCart?.length != 0) {
-      alert("Item is already in the Cart ");
+      return alert("Item is already in the Cart ");
     } else {
       cart?.updateCart([
         ...cart.currentCart,
@@ -39,6 +39,9 @@ const AddToCart = ({ productName, id, price, image }: IAddToCart) => {
         <span
           onClick={(e) => {
             e.stopPropagation();
+            //Prevents 0
+            if (quantity === 1) return;
+
             setQuantity(quantity - 1);
           }}
           className="flex-1 grid place-content-center h-full cursor-pointer opacity-50"
@@ -63,4 +66,4 @@ const AddToCart = ({ productName, id, price, image }: IAddToCart) => {
   );
 };
 
-export default AddToCart;
+export default AddItem;
