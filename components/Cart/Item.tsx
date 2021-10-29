@@ -14,20 +14,26 @@ const Item = ({ image, name, price, quantity, id }: IItem) => {
 
     const newBasket: any = cart?.currentCart.filter((item) => item.id != id);
 
-    cart?.updateCart([...newBasket, item]);
+    if (amount === 0) {
+      //If the user reduces item to 0 then kick out
+      cart?.updateCart([...newBasket]);
+    } else {
+      cart?.updateCart([...newBasket, item]);
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [amount]);
 
   return (
     <div className="flex items-center justify-between">
       <img
-        className="w-16"
+        className="w-16 rounded-lg"
         src={`/${image.split("/").slice(2).join("/")}`}
         alt="product image"
       />
       <div className="flex-1 ml-4">
         <Name name={name} />
-        <h5 className="opacity-50">{`$${price}`}</h5>
+        <h5 className="opacity-50 text-sm">{`$${price}`}</h5>
       </div>
       <span className="w-24 h-8 bg-F1F1F1 flex items-center justify-evenly">
         <span
@@ -36,7 +42,7 @@ const Item = ({ image, name, price, quantity, id }: IItem) => {
         >
           -
         </span>
-        <span className="">{amount}</span>
+        <span>{amount}</span>
         <span
           onClick={(e) => {
             setAmount(amount + 1);

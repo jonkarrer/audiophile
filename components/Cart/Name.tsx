@@ -14,7 +14,7 @@ const Name = ({ name }: { name: string }) => {
 
   return (
     <div>
-      <h5>{shorthandName()}</h5>
+      <h5 className="text-base">{shorthandName()}</h5>
     </div>
   );
 };

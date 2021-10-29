@@ -4,9 +4,11 @@ import CartDropdown from "../Cart/Dropdown";
 
 const Mobile = ({ alpha }: { alpha: number }) => {
   const [menu, setMenu] = useState(true);
+  const [cart, setCart] = useState(true);
 
-  const handleClick = () => {
+  const openMenu = () => {
     setMenu(!menu);
+    setCart(true);
 
     if (menu) {
       document.body.style.overflow = "hidden";
@@ -15,15 +17,29 @@ const Mobile = ({ alpha }: { alpha: number }) => {
     }
   };
 
+  const openCart = () => {
+    setCart(!cart);
+    setMenu(true);
+
+    if (cart) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
+
   return (
     <div className="lg:hidden">
-      <CartDropdown />
-      {/** Hidden Overlay when nav is open */}
+      {/** Hidden Overlay when nav or cart is open */}
       <div
-        className={`fixed h-screen md:w-screen bg-black opacity-60 top-0 z-30 ${
-          menu ? "hidden" : ""
+        className={`fixed h-screen w-screen bg-black opacity-60 top-0 z-30 ${
+          menu === false || cart === false ? "" : "hidden"
         }`}
       ></div>
+
+      <div className={`${cart ? "hidden" : ""}`}>
+        <CartDropdown />
+      </div>
 
       <header
         className="bg-101010 border-b border-979797 md:border-0 w-screen z-50 fixed top-0"
@@ -31,7 +47,8 @@ const Mobile = ({ alpha }: { alpha: number }) => {
       >
         <div className="wrapper flex justify-between items-center h-full md:border-b border-979797">
           <img
-            onClick={() => handleClick()}
+            className="cursor-pointer"
+            onClick={() => openMenu()}
             src="/shared/tablet/icon-hamburger.svg"
             alt="hamburger icon"
             data-cy="hamburger"
@@ -43,7 +60,12 @@ const Mobile = ({ alpha }: { alpha: number }) => {
               alt="logo"
             />
           </div>
-          <img src="/shared/desktop/icon-cart.svg" alt="cart icon" />
+          <img
+            className="cursor-pointer"
+            onClick={() => openCart()}
+            src="/shared/desktop/icon-cart.svg"
+            alt="cart icon"
+          />
         </div>
       </header>
 

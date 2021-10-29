@@ -14,9 +14,8 @@ const AddItem = ({ productName, id, price, image }: IAddToCart) => {
     setQuantity(1);
   }, [router]);
 
+  const checkCart = cart?.currentCart.filter((item) => item.id === id);
   const handleClick = () => {
-    const checkCart = cart?.currentCart.filter((item) => item.id === id);
-
     if (checkCart?.length != 0) {
       return alert("Item is already in the Cart ");
     } else {
@@ -59,8 +58,13 @@ const AddItem = ({ productName, id, price, image }: IAddToCart) => {
           +
         </span>
       </span>
-      <span onClick={() => handleClick()} className="btn gold">
-        Add to Cart
+      <span
+        onClick={() => handleClick()}
+        className={`btn text-white ${
+          checkCart?.length != 0 ? "bg-FBAF85 cursor-not-allowed" : "bg-D87D4A"
+        }`}
+      >
+        {checkCart?.length != 0 ? "In Cart" : "Add to Cart"}
       </span>
     </div>
   );
