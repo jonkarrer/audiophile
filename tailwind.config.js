@@ -24,7 +24,8 @@ module.exports = {
         FAFAFA: "#FAFAFA",
         FFFFFF: "#FFFFFF",
         979797: "rgba(300,300,300,.2)",
-        "4C4C4C" : "#4C4C4C"
+        "4C4C4C" : "#4C4C4C",
+        CFCFCF : "#CFCFCF"
       },
       height: {
         81 : "340px",

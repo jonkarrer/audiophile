@@ -8,8 +8,11 @@ export default function Header() {
   const [alpha, setAlpha] = useState(0);
 
   useEffect(() => {
-    //Set header to solid background for product pages
-    if (router.pathname === "/products/[slug]") {
+    //Set header to solid black background
+    if (
+      router.pathname === "/products/[slug]" ||
+      router.pathname === "/checkout"
+    ) {
       window.onscroll = () => null;
       return setAlpha(1);
     } else {

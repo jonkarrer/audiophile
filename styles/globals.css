@@ -76,6 +76,9 @@ section {
   .light {
     @apply text-white font-extralight opacity-50;
   }
+  .label {
+    @apply text-xs font-bold;
+  }
 }
 
 @layer components {
@@ -102,5 +105,8 @@ section {
   }
   .wrapper {
     @apply mx-6 md:mx-8 lg:m-auto lg:w-11/12 lg:max-w-6xl;
+  }
+  input {
+    @apply border p-3 rounded-lg w-full;
   }
 }
