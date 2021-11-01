@@ -66,7 +66,9 @@ const Cost = ({
   return (
     <div className="flex items-center justify-between">
       <h4 className="opacity-50 text-base font-medium">{cost}</h4>
-      <h4 className="text-lg">{`$ ${amount}`}</h4>
+      <h4
+        className={`text-lg ${cost === "Grand Total" ? "text-D87D4A" : ""}`}
+      >{`$${amount}`}</h4>
     </div>
   );
 };

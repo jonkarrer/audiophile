@@ -4,9 +4,7 @@ const Forms = () => {
       <h2>Checkout</h2>
 
       <form action="" className="grid gap-5">
-        <p className="text-D87D4A tracking-widest text-sm font-medium uppercase">
-          Billing Details
-        </p>
+        <p className="form-title md:col-span-2">Billing Details</p>
         <label htmlFor="name">
           <p className="label">Name</p>
           <input type="text" name="name" placeholder="Alexei Ward" />
@@ -22,10 +20,8 @@ const Forms = () => {
       </form>
 
       <form action="" className="grid gap-5">
-        <p className="text-D87D4A tracking-widest text-sm font-medium uppercase">
-          Shipping Info
-        </p>
-        <label htmlFor="Home Address">
+        <p className="form-title md:col-span-2">Shipping Info</p>
+        <label htmlFor="Home Address" className="md:col-span-2">
           <p className="label">Your Address</p>
           <input
             type="text"
@@ -47,21 +43,24 @@ const Forms = () => {
         </label>
       </form>
 
-      <form action="" className="grid gap-5">
-        <p className="text-D87D4A tracking-widest text-sm font-medium uppercase">
-          Payment Details
-        </p>
+      <form action="" className="grid gap-5 md:grid-cols-2">
+        <p className="form-title md:col-span-2">Payment Details</p>
 
-        <label htmlFor="payment method" className="grid gap-4">
-          <p className="label">Payment Method</p>
-          <div className="flex items-center justify-start border p-3 rounded-lg">
-            <input type="radio" name="payment method" className="w-10" />
-            <h6 className="font-bold text-sm">e-Money</h6>
-          </div>
+        <label
+          htmlFor="payment method"
+          className="grid gap-5 md:col-span-2 md:flex"
+        >
+          <p className="label md:col-start-1 md:flex-1">Payment Method</p>
 
-          <div className="flex items-center justify-start border p-3 rounded-lg">
-            <input type="radio" name="payment method" className="w-10" />
-            <h6 className="font-bold text-sm">Cash on Delivery</h6>
+          <div className="md:flex-1 space-y-5">
+            <div className="flex items-center justify-start border p-3 rounded-lg md:col-start-2">
+              <input type="radio" name="payment method" className="w-10" />
+              <h6 className="font-bold text-sm">e-Money</h6>
+            </div>
+            <div className="flex items-center justify-start border p-3 rounded-lg md:col-start-2">
+              <input type="radio" name="payment method" className="w-10" />
+              <h6 className="font-bold text-sm">Cash on Delivery</h6>
+            </div>
           </div>
         </label>
 

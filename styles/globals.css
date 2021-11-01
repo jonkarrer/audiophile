@@ -109,4 +109,7 @@ section {
   input {
     @apply border p-3 rounded-lg w-full;
   }
+  .form-title {
+    @apply text-D87D4A tracking-widest text-sm font-medium uppercase;
+  }
 }
