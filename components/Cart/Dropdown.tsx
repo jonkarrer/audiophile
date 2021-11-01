@@ -1,8 +1,10 @@
 import { useCartContext } from "./CartProvider";
 import Item from "./Item";
+import { useRouter } from "next/router";
 
 const Dropdown = () => {
   const cart = useCartContext();
+  const router = useRouter();
 
   return (
     <div className="fixed left-0 top-0 w-screen z-40 lg:right-0 lg:m-auto lg:wrapper">
@@ -33,7 +35,12 @@ const Dropdown = () => {
           <h4 className="opacity-50 text-base font-medium">Total</h4>
           <h4 className="text-lg">{`$ ${cart?.total}`}</h4>
         </div>
-        <button className="btn gold w-full">Checkout</button>
+        <button
+          onClick={() => router.push("/checkout")}
+          className="btn gold w-full"
+        >
+          Checkout
+        </button>
       </div>
     </div>
   );
