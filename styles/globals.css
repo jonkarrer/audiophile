@@ -4,8 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #fafafa;
 }
 
 a {
@@ -107,7 +106,7 @@ section {
     @apply mx-6 md:mx-8 lg:m-auto lg:w-11/12 lg:max-w-6xl;
   }
   input {
-    @apply border p-3 rounded-lg w-full;
+    @apply border px-3 h-14 rounded-lg w-full hover:border-D87D4A focus:outline-none focus:border-D87D4A cursor-pointer;
   }
   .form-title {
     @apply text-D87D4A tracking-widest text-sm font-medium uppercase;

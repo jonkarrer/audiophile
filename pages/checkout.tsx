@@ -1,13 +1,17 @@
 import { useRouter } from "next/router";
 import Forms from "@/components/Checkout/Forms";
 import Summary from "@/components/Checkout/Summary";
+
 function Checkout() {
   const router = useRouter();
 
   return (
-    <section className="bg-FAFAFA">
-      <div className="wrapper mt-14 md:mt-0 grid gap-5">
-        <p onClick={() => router.back()} className="opacity-50 cursor-pointer">
+    <section className="bg-FAFAFA relative">
+      <div className="wrapper mt-14 md:mt-0 grid gap-5 lg:mt-14">
+        <p
+          onClick={() => router.back()}
+          className="opacity-50 cursor-pointer lg:col-span-2"
+        >
           Go Back
         </p>
 

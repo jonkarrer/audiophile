@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 const Forms = () => {
+  const [payment, setPayment] = useState(false);
   return (
-    <div className="p-6 bg-white rounded-lg grid gap-8">
+    <div className="p-6 bg-white rounded-lg grid gap-8 lg:flex-2">
       <h2>Checkout</h2>
 
       <form action="" className="grid gap-5">
@@ -53,22 +56,33 @@ const Forms = () => {
           <p className="label md:col-start-1 md:flex-1">Payment Method</p>
 
           <div className="md:flex-1 space-y-5">
-            <div className="flex items-center justify-start border p-3 rounded-lg md:col-start-2">
-              <input type="radio" name="payment method" className="w-10" />
-              <h6 className="font-bold text-sm">e-Money</h6>
+            <div className="flex items-center justify-start border px-3 h-14 rounded-lg md:col-start-2 hover:border-D87D4A cursor-pointer">
+              <input
+                type="radio"
+                name="payment method"
+                className="w-10 h-6 bg-D87D4A"
+                onClick={() => setPayment(false)}
+              />
+              <h6 className="font-bold text-sm ml-2">e-Money</h6>
             </div>
-            <div className="flex items-center justify-start border p-3 rounded-lg md:col-start-2">
-              <input type="radio" name="payment method" className="w-10" />
-              <h6 className="font-bold text-sm">Cash on Delivery</h6>
+
+            <div className="flex items-center justify-start border px-3 h-14 rounded-lg md:col-start-2 hover:border-D87D4A cursor-pointer">
+              <input
+                onClick={() => setPayment(true)}
+                type="radio"
+                name="payment method"
+                className="w-10 h-6"
+              />
+              <h6 className="font-bold text-sm ml-2">Cash on Delivery</h6>
             </div>
           </div>
         </label>
 
-        <label htmlFor="money number">
+        <label htmlFor="money number" className={`${payment ? "hidden" : ""}`}>
           <p className="label">e-money/Number</p>
           <input type="text" name="money number" placeholder="238521993" />
         </label>
-        <label htmlFor="money pin">
+        <label htmlFor="money pin" className={`${payment ? "hidden" : ""}`}>
           <p className="label">e-money/PIN</p>
           <input type="text" name="money pin" placeholder="6891" />
         </label>

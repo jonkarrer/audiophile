@@ -1,15 +1,26 @@
 import { useCartContext } from "@/components/Cart/CartProvider";
-import Name from "@/components/Cart/Name";
-import { IItem } from "@/utils/interfaces";
+import Item from "./Item";
+import Order from "@/components/Checkout/Order";
+import { useState } from "react";
 
 const Summary = () => {
   const cart = useCartContext();
   const grandTotal = cart != undefined ? cart.total + 50 : undefined;
+  const [order, setOrder] = useState(false);
 
-  console.log(grandTotal);
+  const handleClick = () => {
+    setOrder(true);
+
+    if (order) {
+      document.body.style.overflow = "scroll";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  };
+
   return (
-    <div className="p-6 bg-white rounded-lg grid gap-6">
-      <h4>Summary</h4>
+    <div className="container p-6 bg-white rounded-lg grid gap-6 ">
+      <h4 className="lg:text-lg">Summary</h4>
       <div className="grid gap-6">
         {cart?.currentCart.map((item) => (
           <div key={item.id}>
@@ -32,29 +43,24 @@ const Summary = () => {
 
       <Cost cost="Grand Total" amount={grandTotal} />
 
-      <button className="btn gold w-full">Continue and Pay</button>
+      <button onClick={() => handleClick()} className="btn gold w-full">
+        Continue and Pay
+      </button>
+
+      <div className={`${order ? "block" : "hidden"}`}>
+        <Order />
+      </div>
+
+      <style jsx>{`
+        .container {
+          height: max-content;
+        }
+      `}</style>
     </div>
   );
 };
 
 export default Summary;
-
-const Item = ({ image, name, price, quantity, id }: IItem) => {
-  return (
-    <div className="flex items-center justify-between">
-      <img
-        className="w-16 rounded-lg"
-        src={`/${image.split("/").slice(2).join("/")}`}
-        alt="product image"
-      />
-      <div className="flex-1 ml-4">
-        <Name name={name} />
-        <h5 className="opacity-50 text-sm">{`$${price}`}</h5>
-      </div>
-      <p>{`x${quantity}`}</p>
-    </div>
-  );
-};
 
 const Cost = ({
   cost,
