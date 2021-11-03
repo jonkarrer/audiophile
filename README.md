@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jonkarrer/audiophile" >
-    <img src="public/shared/desktop/logo.svg" alt="Logo" width="300" height="100">
+    <img src="public/shared/desktop/logo.svg" alt="Logo" width="250" height="75">
   </a>
 
   <h3 align="center">audiophile</h3>
