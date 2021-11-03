@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Gallery = () => (
   <section>
     <div className="wrapper grid gap-6 lg:gap-12">
@@ -25,6 +27,7 @@ const Circles = () => {
     </svg>
   );
 };
+
 const OrangePanel = () => (
   <article className="bg-D87D4A relative grid gap-12 place-items-center py-16 rounded-lg overflow-hidden lg:flex lg:justify-evenly">
     <Circles />
@@ -39,7 +42,9 @@ const OrangePanel = () => (
         Upgrade to premium speakers that are phenomenally built to deliver truly
         remarkable sound.
       </p>
-      <button className="btn black z-10">See Product</button>
+      <Link passHref href="products/zx9-speaker">
+        <button className="btn black z-10">See Product</button>
+      </Link>
     </div>
   </article>
 );
@@ -47,7 +52,9 @@ const OrangePanel = () => (
 const GreyPanel = () => (
   <article className="bg-/home/mobile/image-speaker-zx7 bg-cover h-80 rounded-lg grid gap-9 place-content-center justify-start px-6 md:bg-/home/tablet/image-speaker-zx7 md:px-16 lg:bg-/home/desktop/image-speaker-zx7">
     <h2 className="text-2xl">zx7 speaker</h2>
-    <button className="btn bg-none border-2 border-black">see product</button>
+    <Link passHref href="products/zx7-speaker">
+      <button className="btn bg-none border-2 border-black">see product</button>
+    </Link>
   </article>
 );
 
@@ -56,7 +63,11 @@ const Earphones = () => (
     <div className="rounded-lg bg-/home/mobile/image-earphones-yx1 bg-cover h-52 w-full md:bg-/home/tablet/image-earphones-yx1 md:h-80 md:flex-1 lg:bg-/home/desktop/image-earphones-yx1"></div>
     <article className="rounded-lg grid gap-9 place-content-center justify-start px-6 bg-F1F1F1 h-52 md:h-80 md:w-1/2 md:px-16">
       <h2 className="text-2xl">yx1 earphones</h2>
-      <button className="btn bg-none border-2 border-black">see product</button>
+      <Link passHref href="products/yx1-earphones">
+        <button className="btn bg-none border-2 border-black">
+          see product
+        </button>
+      </Link>
     </article>
   </div>
 );
