@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jonkarrer/audiophile" >
-    <img src="public/shared/desktop/logo.svg" alt="Logo" width="150" height="150">
+    <img src="public/shared/desktop/logo.svg" alt="Logo" width="350" height="150">
   </a>
 
   <h3 align="center">audiophile</h3>
@@ -70,9 +70,10 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Built With
 
 - [Typescript](https://www.typescriptlang.org)
+- [Next.js](https://www.nextjs.org)
+- [Tailwind](https://tailwindcss.com/)
 - [Supabase](https://www.supabase.io)
 - [Modern Javascript](https://javascript.info)
-- [HTML/CSS](https://www.w3schools.com/html/default.asp)
 
 <!-- GETTING STARTED -->
 
