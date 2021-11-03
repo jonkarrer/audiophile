@@ -20,18 +20,26 @@ const Footer = () => {
             src="/shared/desktop/logo.svg"
             alt="logo"
           />
-          <nav className="grid gap-7 m-auto text-center md:m-0 md:flex md:gap-0 md:space-x-7 md:col-span-2 lg:col-span-1 lg:justify-end">
+          <nav className="grid gap-7 m-auto text-center text-white md:m-0 md:flex md:gap-0 md:space-x-7 md:col-span-2 lg:col-span-1 lg:justify-end">
             <Link passHref href="/">
-              <span className="subtitle text-white">Home</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Home
+              </span>
             </Link>
             <Link passHref href="/headphones">
-              <span className="subtitle text-white">Headphones</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Headphones
+              </span>
             </Link>
             <Link passHref href="/speakers">
-              <span className="subtitle text-white">Speakers</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Speakers
+              </span>
             </Link>
             <Link passHref href="/earphones">
-              <span className="subtitle text-white">Earphones</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Earphones
+              </span>
             </Link>
           </nav>
           <p className="light text-center md:text-left md:col-span-2 lg:col-span-1">
@@ -45,17 +53,17 @@ const Footer = () => {
           </p>
           <div className="flex m-auto space-x-4 md:justify-self-end md:m-0 lg:self-end">
             <img
-              className="w-6 h-6"
+              className="w-6 h-6 cursor-pointer"
               src="/shared/desktop/icon-facebook.svg"
               alt="facebook icon"
             />
             <img
-              className="w-6 h-6"
+              className="w-6 h-6 cursor-pointer"
               src="/shared/desktop/icon-twitter.svg"
               alt="facebook icon"
             />
             <img
-              className="w-6 h-6"
+              className="w-6 h-6 cursor-pointer"
               src="/shared/desktop/icon-instagram.svg"
               alt="facebook icon"
             />

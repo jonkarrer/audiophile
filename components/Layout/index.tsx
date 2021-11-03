@@ -8,8 +8,9 @@ const Layout = ({ children }: Children) => (
   <div>
     <Head>
       <title>audiophile</title>
-      <meta name="description" content="front-end mentor challenge" />
+      <meta name="e-commerce" content="front-end mentor challenge" />
     </Head>
+
     <Header />
     {children}
     <Footer />

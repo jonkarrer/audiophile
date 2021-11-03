@@ -1,22 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Catagories from "../lib/Catagories";
 import CartDropdown from "../Cart/Dropdown";
+import { useRouter } from "next/router";
 
 const Mobile = ({ alpha }: { alpha: number }) => {
   const [menu, setMenu] = useState(true);
   const [cart, setCart] = useState(true);
+  const router = useRouter();
+
+  useEffect(() => {
+    //When the route changes, close the header and unlock body.
+    setMenu(true);
+    setCart(true);
+    document.body.style.overflow = "scroll";
+  }, [router]);
 
   const openMenu = () => {
     setMenu(!menu);
     setCart(true);
-
     if (menu) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "scroll";
     }
   };
-
   const openCart = () => {
     setCart(!cart);
     setMenu(true);
@@ -55,9 +62,10 @@ const Mobile = ({ alpha }: { alpha: number }) => {
           />
           <div className="flex items-center md:flex-1 md:px-11">
             <img
-              className="justify-self-start"
+              className="justify-self-start cursor-pointer"
               src="/shared/desktop/logo.svg"
               alt="logo"
+              onClick={() => router.push("/")}
             />
           </div>
           <img

@@ -1,9 +1,18 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import CartDropdown from "@/components/Cart/Dropdown";
 
 const Desktop = ({ alpha }: { alpha: number }) => {
   const [cart, setCart] = useState(true);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    //When the route changes, close the dropdown and unlock body.
+    setCart(true);
+    document.body.style.overflow = "scroll";
+  }, [router]);
 
   const openCart = () => {
     setCart(!cart);
@@ -39,16 +48,24 @@ const Desktop = ({ alpha }: { alpha: number }) => {
           </Link>
           <nav className="text-white grid grid-flow-col gap-9">
             <Link passHref href="/">
-              <span className="subtitle cursor-pointer">Home</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Home
+              </span>
             </Link>
             <Link passHref href="/headphones">
-              <span className="subtitle cursor-pointer">Headphones</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Headphones
+              </span>
             </Link>
             <Link passHref href="/speakers">
-              <span className="subtitle cursor-pointer">Speakers</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Speakers
+              </span>
             </Link>
             <Link passHref href="/earphones">
-              <span className="subtitle cursor-pointer">Earphones</span>
+              <span className="subtitle cursor-pointer hover:text-D87D4A">
+                Earphones
+              </span>
             </Link>
           </nav>
 
